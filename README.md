@@ -1,6 +1,6 @@
 # Azure CAF Enterprise Landing Zone (Terraform)
 
-My production-grade Azure landing zone built 100% with Terraform following Microsoft Cloud Adoption Framework (CAF) and Enterprise-Scale best practices.
+My production-grade Azure landing zone was built 100% with Terraform, following Microsoft Cloud Adoption Framework (CAF) and Enterprise-Scale best practices.
 
 ## Features
 - Proper management group hierarchy (Root → Decommissioned → Sandboxes → Landing Zones → Platform → Corp/Online)  
@@ -10,7 +10,9 @@ My production-grade Azure landing zone built 100% with Terraform following Micro
 - Modular design ready for connectivity, identity, management, and sandbox subscriptions  
 - Zero portal clicks – everything as code
 
-## Structure                                                                                                                                                                                                                                                                   ├── modules/                  # Reusable enterprise modules (management_group, policy, etc.)
+## Structure 
+
+├── modules/                  # Reusable enterprise modules (management_group, policy, etc.)
 ├── landingzone/              # Subscription-level configs (connectivity, identity, etc.)
 ├── .github/workflows         # GitHub Actions CI/CD
 ├── backend.tf                # Remote state (Azure backend)

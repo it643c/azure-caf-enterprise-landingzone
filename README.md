@@ -11,45 +11,20 @@ My production-grade Azure landing zone built 100 % with Terraform following Micr
 - Zero portal clicks – everything as code
 
 ## Structure
-# 3. Final push
-git add .
-git commit -m "ci: add GitHub Actions workflow + professional README with badge"
-git push
 
-# 1. GitHub Actions workflow – runs fmt, validate, plan on every push/PR
-cat > .github/workflows/terraform.yml <<'EOF'
-name: Terraform CI
+   ├── modules/                  # Reusable enterprise modules
+├── .github/workflows         # GitHub Actions CI/CD
+├── backend.tf                # Remote state (Azure backend)
+├── providers.tf
+├── versions.tf
+└── README.md
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
+## Why this matters
+This is the same pattern used by Fortune-500 Azure environments. One engineer can now deploy and govern what used to take entire teams of classic admins.
 
-jobs:
-  terraform:
-    name: Terraform
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
+Built from scratch in 2025 by an old-school sysadmin who came back and translated Tier-0 Active Directory thinking into modern IaC.
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+Open to opportunities – DM me if you need someone who actually understands why these controls exist.
 
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
-        with:
-          terraform_version: 1.9.8
-
-      - name: Terraform Format
-        run: terraform fmt -check
-
-      - name: Terraform Init
-        run: terraform init -backend=false
-
-      - name: Terraform Validate
-        run: terraform validate -no-color
-
-      - name: Terraform Plan
-        run: terraform plan -no-color -out=plan.tfplan
+[![Terraform CI](https://github.com/it643c/azure-caf-enterprise-landingzone/actions/workflows/terraform.yml/badge.svg)](https://github.com/it643c/azure-caf-enterprise-landingzone/actions/workflows/terraform.yml)
+EOF

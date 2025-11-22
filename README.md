@@ -17,12 +17,11 @@ My production-grade Azure landing zone built 100% with Terraform following Micro
 ├── providers.tf
 ├── variables.tf
 ├── terraform.tfvars.example
-├── versions.tf
-└── README.md                  ## Why this matters
+## Why this matters
 This is the same pattern used by Fortune-500 Azure environments. One engineer can now deploy and govern what used to take entire teams of classic admins.
 
 Built from scratch in 2025 by an old-school sysadmin who came back and translated Tier-0 Active Directory thinking into modern IaC.
 
 Open to opportunities – DM me if you need someone who actually understands why these controls exist.
 
-[![Terraform CI](https://github.com/it643c/azure-caf-enterprise-landingzone/actions/workflows/terraform.yml/badge.svg)](https://github.com/it643c/azure-caf-enterprise-landingzone/actions/workflows/terraform.yml)
+[![Terraform CI](https://github.com/it643c/azure-caf-enterprise-landingzone/actions/workflows/terraform.yml/badge.svg?branch=main)](https://github.com/it643c/azure-caf-enterprise-landingzone/actions/workflows/terraform.yml)

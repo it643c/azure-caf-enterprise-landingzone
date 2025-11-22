@@ -25,6 +25,3 @@ This is the same pattern used by Fortune-500 Azure environments. One engineer ca
 Built from scratch in 2025 by an old-school sysadmin who came back and translated Tier-0 Active Directory thinking into modern IaC.
 
 Open to opportunities – DM me if you need someone who actually understands why these controls exist.
-
-[![Terraform CI](https://github.com/it643c/azure-caf-enterprise-landingzone/actions/workflows/terraform.yml/badge.svg)](https://github.com/it643c/azure-caf-enterprise-landingzone/actions/workflows/terraform.yml)
-EOF
